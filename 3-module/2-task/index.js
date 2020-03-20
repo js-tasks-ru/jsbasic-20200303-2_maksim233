@@ -1,7 +1,7 @@
-/**
- * Найти min/max в произвольной строке
- * @param   {string} str -  входные данные
- * @returns {{min:number, max:number}}  объект
- */
-function getMinMax(str) {
-}
+function getMinMax(string) { 
+    const re = /,|\s+/g;
+    let numbers = string.split(re).filter( item => !isNaN(item) );
+    console.log("numbers"+numbers);
+    return { min: Math.min(...numbers), max: Math.max(...numbers)}
+  }
+  
